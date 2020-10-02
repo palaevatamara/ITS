@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: Томик
+Build-Jdk: 1.8.0_241
+Implementation-Title: IT-Servis
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: com.vaadin.tutorial.crm
+Main-Class: ${start-class}
+
