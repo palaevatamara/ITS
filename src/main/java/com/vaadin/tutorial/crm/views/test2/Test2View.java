@@ -30,7 +30,6 @@ public class Test2View extends HorizontalLayout {
     private TextField num =new TextField("Введите число");;
     private Button count= new Button("Подсчитать");
     private Button save= new Button("Сохранить");
-    private Button load= new Button("Загрузить");
     private Label label= new Label();
 
     private String result = "";
@@ -49,8 +48,8 @@ public class Test2View extends HorizontalLayout {
 
     private Component createButton() {
         count.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
-        save.addThemeVariants(ButtonVariant.LUMO_SUCCESS);
-        load.addThemeVariants(ButtonVariant.LUMO_ICON);
+        save.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+
 
         count.addClickShortcut(Key.ENTER);
         count.addClickListener(click -> countResult());
@@ -61,15 +60,11 @@ public class Test2View extends HorizontalLayout {
                 e.printStackTrace();
             }
         });
-        load.addClickListener(click -> upLoadButton());
 
-        HorizontalLayout createButton = new HorizontalLayout(count,save,load) ;
+
+        HorizontalLayout createButton = new HorizontalLayout(count,save) ;
         createButton.addClassName("create-Button");
         return new VerticalLayout(createButton);
-    }
-
-    private void upLoadButton() {
-
     }
 
     private void saveButton() throws IOException {
